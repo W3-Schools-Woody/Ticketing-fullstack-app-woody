@@ -3,9 +3,15 @@ const { Sequelize } = require('sequelize');
 
 
 // --------  DB connection config
-const sequelize = new Sequelize("ticketing", "Werk", "milesboi", {
-    host: "localhost",
-    dialect: "postgres"
+const sequelize = new Sequelize("ticketing_99yi", "woodum", "LCD4Hl33XPq0cqDzmp8OtnqSfrcBcbM2", {
+    host: "dpg-ckedridtj22c73dfb7h0-a",
+    dialect: "postgres", 
+    dialectOptions: {
+            ssl: {
+                require: true,
+                rejectUnauthorized: false
+            }
+        }
 });
 
 
